@@ -38,7 +38,7 @@ export default function Summaries()
             </Box>
             <Grid spacing={3} container direction="row" justify="center" alignItems="stretch">
                 {thirdYearCourses.map((course, index) =>
-                    <Grid item item xs={12} sm={6} md={3} lg={3} xl={3}>
+                    <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
                         <div className="card-container" key={index}>
                             <CourseCard 
                                 name={course.name}
