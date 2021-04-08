@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+// import Hero from '../Hero';
+import Tips from '../Tips';
 
-export default function Homepage() {
+export default function Homepage() 
+{
     return (
-        <div className="container">
-            hey
-        </div>
+        <>
+            {/* <Hero /> */}
+            <Tips />
+        </>
     )
 }
