@@ -11,8 +11,12 @@ const useStyles = makeStyles(() =>
 ({
     grid:
     {
-        width: '80%',
-        padding: '20px 0'
+        width: '85%',
+        padding: '20px 0',
+        '@media (max-width: 600px)':
+        {
+            width: '100%'
+        }
     }
 }));
 

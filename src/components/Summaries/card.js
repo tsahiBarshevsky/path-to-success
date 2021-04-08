@@ -12,13 +12,13 @@ import firebase from '../firebase';
 const useStyles = makeStyles((theme) => ({
     root: 
     {
-        width: 300,
+        width: '100%',
         marginBottom: 10,
         boxShadow: '0 3px 7px -1px rgba(black, 0.1)',
-        "@media (max-width: 356px)":
-        {
-            width: 200
-        }
+        // "@media (max-width: 356px)":
+        // {
+        //     width: 200
+        // }
     },
     media: 
     {
