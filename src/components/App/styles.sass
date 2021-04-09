@@ -63,9 +63,8 @@ $secondary: #d32f2f
     justify-content: center
     align-items: center
     cursor: default
-    //padding-top: 45px
     box-sizing: border-box
-    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 45%, rgba(2, 0, 36, 1) 100%), url("https://images.unsplash.com/photo-1465433045946-ba6506ce5a59?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80") fixed
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 45%, rgba(2, 0, 36, 1) 100%), url("../../images/hero.jpg") fixed
     background-blend-mode: screen
     background-position: center
     background-repeat: no-repeat
@@ -79,6 +78,8 @@ $secondary: #d32f2f
         width: 100%
         height: 50vh
         z-index: 2
+        color: white
+        text-shadow: 2px 2px 2px black
 
     // wave
     svg
@@ -212,7 +213,7 @@ $secondary: #d32f2f
 .links-section
     background-color: $primary
     width: 100%
-    padding: 50px 50px 20px
+    padding: 50px 50px 0
     display: flex
     flex-direction: column
     justify-content: center
@@ -255,29 +256,38 @@ $secondary: #d32f2f
 /* === Footer === */
 
 .footer-container
-    position: relative
-    width: 100%
-    height: 400px
     display: flex
+    flex-direction: column
     justify-content: center
     align-items: flex-end
+    color: white
+    width: 100%
     cursor: default
-    padding: 15px
     box-sizing: border-box
-    background-color: #447fbb
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 45%, rgba(2, 0, 36, 1) 100%), url("../../images/footer.jpg")
+    background-blend-mode: screen
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
 
     .footer-content
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        border: 1px dashed white
         width: 100%
+        padding: 10px
+        transform: translateY(-50%)
 
-        // .text
-        //     padding: 10px 25px 25px //top sides bottom
+        @media screen and ( max-width: $xs )
+            transform: translateY(0%)
+
+        p
+            text-shadow: 2px 2px 2px black
+            font-size: 18px
+            font-weight: 600
+            letter-spacing: 1px
+            text-align: center
 
     svg
-        position: absolute
-        top: 0
-        left: 0
+        width: 100%
