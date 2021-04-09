@@ -5,6 +5,7 @@ import Tips from '../Tips';
 import Summaries from '../Summaries';
 import Links from '../Links';
 import Footer from '../Footer';
+import BackToTop from '../Back To Top Button';
 
 export default function Homepage() 
 {
@@ -16,6 +17,7 @@ export default function Homepage()
             <Summaries />
             <Links />
             <Footer />
+            <BackToTop showBelow={110} />
         </>
     )
 }
