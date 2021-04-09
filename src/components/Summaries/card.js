@@ -16,10 +16,6 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 10,
         boxShadow: '0 3px 7px -1px rgba(black, 0.1)',
         borderRadius: 10
-        // "@media (max-width: 356px)":
-        // {
-        //     width: 200
-        // }
     },
     media: 
     {
