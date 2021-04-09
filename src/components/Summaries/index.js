@@ -19,8 +19,8 @@ export default function Summaries()
             <h3 className="section-subtitle">סריקות של הרצאות, תרגולים וסיכומים</h3>
             <h2 className="title">שנה א' וחומרים נוספים</h2>
             <div className="buttons">
-                <Button variant="contained">ערבוב חומרים שנה א'</Button>
-                <Button variant="contained">שיעורי חזרה וסיכומים נוספים</Button>
+                <Button className="button">ערבוב חומרים שנה א'</Button>
+                <Button className="button">שיעורי חזרה וסיכומים נוספים</Button>
             </div>
             <h2 className="title">שנה ב'</h2>
             <Grid spacing={3} container direction="row" justify="center" alignItems="stretch">

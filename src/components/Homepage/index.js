@@ -1,7 +1,8 @@
 import React from 'react';
-import Summaries from '../Summaries';
 import Hero from '../Hero';
 import Tips from '../Tips';
+// import Summaries from '../Summaries';
+import Links from '../Links';
 import Footer from '../Footer';
 
 export default function Homepage() 
@@ -10,7 +11,8 @@ export default function Homepage()
         <>
             <Hero />
             <Tips />
-            <Summaries />
+            {/* <Summaries /> */}
+            <Links />
             <Footer />
         </>
     )

@@ -10,7 +10,7 @@ $navbar-mobile: 768px
 /* === Colors --- */
 
 $primary: #f5f5f5
-$hover-color: #d32f2f
+$secondary: #d32f2f
 
 /* === General selectors === */
 
@@ -48,7 +48,7 @@ $hover-color: #d32f2f
     line-height: 50px
 
 .section-subtitle
-    font-size: 30px
+    font-size: 25px
     margin-bottom: 30px
     text-align: center
     line-height: 30px
@@ -132,7 +132,7 @@ $hover-color: #d32f2f
             transition: color 0.5s ease-in-out
 
             &:hover
-                color: $hover-color
+                color: $secondary
 
 /* === Summaries section === */
 
@@ -150,9 +150,26 @@ $hover-color: #d32f2f
         display: flex
         justify-content: center
         align-items: center
-        border: 1px solid black
         width: 100%
         padding: 10px
+
+        @media screen and ( max-width: $xs )
+            flex-direction: column
+
+        .button
+            color: $secondary
+            width: 160px
+            height: 50px
+            font-size: 19px
+            line-height: 20px
+            margin: 5px
+            border: 2px solid $secondary
+            border-radius: 25px
+            transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out
+
+            &:hover
+                color: white
+                background-color: $secondary
 
     .title
         text-align: center
@@ -183,14 +200,57 @@ $hover-color: #d32f2f
     font-size: 20px
 
 .card-link
-    text-decoration: none
     color: black
+    text-decoration: none
     transition: color 0.5s ease-in-out
 
     &:hover
-        color: $hover-color
+        color: $secondary
 
 /* === Links Section === */
+
+.links-section
+    background-color: $primary
+    width: 100%
+    padding: 50px 50px 20px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    cursor: default
+
+    ol
+        list-style: none
+        counter-reset: steps
+        font-size: 22px
+
+        li
+            counter-increment: steps
+            margin: 0 0 10px 0
+
+            &:before
+                font-size: 25px
+                font-weight: bold
+                content: counter(steps)
+                background: $secondary
+                color: white
+                width: 32px
+                height: 32px
+                border-radius: 50%
+                display: inline-grid
+                place-items: center
+                line-height: 1.2em
+                margin: 0 0 5px 15px
+                transform: rotate(10deg)
+                box-shadow: 2px 2px 2px rgba(#999, 0.6)
+
+            a
+                color: black
+                text-decoration: none
+                transition: color 0.5s ease-in-out
+
+                &:hover
+                    color: $secondary
 
 /* === Footer === */
 
