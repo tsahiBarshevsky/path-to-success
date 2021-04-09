@@ -53,6 +53,37 @@ export default function as()
                         target="_blank" rel="noreferrer">תכנון וניתוח אלגוריתמים </a>
                         - עבדול בארי
                 </li>
+                <li>
+                    <a 
+                        href="https://www.youtube.com/watch?v=Qkwj65l_96I&list=PLEbnTDJUr_IcPtUXFy2b1sGRPsLFMghhS"
+                        target="_blank" rel="noreferrer">תורת הקומפילציה </a>
+                        - טושאר
+                </li>
+                <li>
+                    <a 
+                        href="https://www.youtube.com/watch?v=H7iGUr2W5N8&t=319s"
+                        target="_blank" rel="noreferrer">תורת הקומפילציה - סילוק רקורסיה שמאלית</a>
+                </li>
+                <li>
+                    <a 
+                        href="https://youtu.be/whe29gOb8p4"
+                        target="_blank" rel="noreferrer">תורת הקומפילציה - סילוק גורמים משותפים</a>
+                </li>
+                <li>
+                    <a 
+                        href="https://youtu.be/SBnjVW8dUqo"
+                        target="_blank" rel="noreferrer">תורת הקומפילציה - חישוב תכונות Nullable, First & Follow</a>
+                </li>
+                <li>
+                    <a 
+                        href="https://www.youtube.com/watch?v=XpZZrQjOAJY&list=PLW1OMpQZxu7xMh7nuDQYQ2mDcqY2hzBWk&index=5"
+                        target="_blank" rel="noreferrer">תורת הקומפילציה - מילוי טבלת LL(1)</a>
+                </li>
+                <li>
+                    <a 
+                        href="https://www.youtube.com/watch?v=caGd_-TvPLc"
+                        target="_blank" rel="noreferrer">תורת הקומפילציה - בניית אוטומט, דקדוק LR(0) ו-SLR</a>
+                </li>
             </ol>
         </div>
     )

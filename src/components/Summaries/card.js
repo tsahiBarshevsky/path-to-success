@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -7,7 +7,6 @@ import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import firebase from '../firebase';
 
 const useStyles = makeStyles((theme) => ({
     root: 
@@ -39,16 +38,6 @@ export default function CourseCard(props)
 {
     const classes = useStyles();
     const [expanded, setExpanded] = useState(false);
-    const [urls, setUrls] = useState([]);
-
-    useEffect(() => {
-        props.materials.map((material) => 
-            firebase.storage.ref(props.name).child(`${material}.pdf`)
-            .getDownloadURL().then(
-                url => {setUrls(oldArray => [...oldArray, url]);}
-            )
-        );
-    }, [props.name, props.materials]);
 
     const handleExpandClick = () => 
     {
@@ -85,10 +74,10 @@ export default function CourseCard(props)
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                    {props.materials.map((material, index) =>
-                        <div key={index} style={{marginBottom: 2}}>
-                            <a href={urls[index]} className="card-link" target="_blank" rel="noreferrer">
-                                {material}
+                    {props.materials.map((material) =>
+                        <div key={material.id} style={{marginBottom: 2}}>
+                            <a href={material.link} className="card-link" target="_blank" rel="noreferrer">
+                                {material.kind}
                             </a>
                         </div>
                     )}

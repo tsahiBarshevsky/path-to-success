@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Box, Button, Grid } from '@material-ui/core';
 import CourseCard from './card';
-import firebase from '../firebase';
+import { secondYearCourses, thirdYearCourses } from './courses';
 
 export default function Summaries() 
 {
-    const [secondYearCourses, setSecondYearCourses] = useState([]);
-    const [thirdYearCourses, setThirdYearCourses] = useState([]);
-
-    useEffect(() => {
-        firebase.getAllCourses('Courses').then(setSecondYearCourses);
-        firebase.getAllCourses('thirdYearCourses').then(setThirdYearCourses);
-        firebase.storage.ref('חומרים שונים').child(`שיעורי חזרה וסיכומים נוספים.zip`)
-        .getDownloadURL().then(
-            url => {console.log(url);}
-        )
-    }, []);
 
     return (
         <div className="summaries-section" id="summaries">
@@ -34,11 +23,11 @@ export default function Summaries()
                     </a>
                 </Button>
             </div>
-            <h2 className="title">שנה ב'</h2>
+            <h2 className="title">קורסים של שנה ב'</h2>
             <Grid spacing={3} container direction="row" justify="center" alignItems="stretch">
-                {secondYearCourses.map((course, index) =>
+                {secondYearCourses.map((course) =>
                     <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
-                        <div className="card-container" key={index}>
+                        <div className="card-container" key={course.id}>
                             <CourseCard 
                                 name={course.name}
                                 semester={course.semester}
@@ -51,12 +40,12 @@ export default function Summaries()
                 )}
             </Grid>
             <Box mt={3}>
-                <h2 className="title">שנה ג'</h2>
+                <h2 className="title">קורסים של שנה ג'</h2>
             </Box>
             <Grid spacing={3} container direction="row" justify="center" alignItems="stretch">
-                {thirdYearCourses.map((course, index) =>
+                {thirdYearCourses.map((course) =>
                     <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
-                        <div className="card-container" key={index}>
+                        <div className="card-container" key={course.id}>
                             <CourseCard 
                                 name={course.name}
                                 semester={course.semester}

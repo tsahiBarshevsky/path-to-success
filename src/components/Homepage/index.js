@@ -16,7 +16,7 @@ export default function Homepage()
     useEffect(() => {
         setTimeout(() => {
             setLoad(true);
-        }, 1500);
+        }, 500);
     }, []);
 
     return (
