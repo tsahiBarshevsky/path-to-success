@@ -60,8 +60,8 @@ export default function Tips()
                         ותחפשו שיעורים מוקלטים בגוגל וביוטיוב שיכולים
                         לפשט הכל. לינקים כאלו תוכלו למצוא
                         <Link className="link"
-                            smooth={true} duration={500} spy={true}
-                            exact='true' offset={-40}
+                            smooth={true} duration={1000} spy={true}
+                            exact='true' offset={-20}
                             to="links"
                             >
                                 כאן

@@ -5,8 +5,9 @@ import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 const theme = createMuiTheme({
     typography:
     {
-        allVariants: { fontFamily: `"Alef", sans-serif`, textAlign: 'center' },
-        h3: { lineHeight: 1 }
+        allVariants: { fontFamily: `"Gveret-Levin", sans-serif`, textAlign: 'center' },
+        h3: { lineHeight: 1, letterSpacing: 1, marginBottom: 5 },
+        h5: { letterSpacing: 1 }
     }
 });
 
